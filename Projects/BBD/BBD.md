@@ -176,6 +176,8 @@ if ($transactions_maid && ($transactions_maid >= $transactions_billed)
 
 # Проблемы
 
+Не работает локально метод POST между PMS и BBD по какой-то причине, только GET
+
 Может не записывать в логи из-за прав в папке **app/application/logs**.
 Проверить создание файла и папки можно через:
 ```php
