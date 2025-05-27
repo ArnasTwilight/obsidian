@@ -1,5 +1,7 @@
 #BBD 
 
+[link](https://git.dev.bnovo.ru/internal/bnovo.booking.desk/-/blob/master/app/application/classes/model/supplierdoc.php?ref_type=heads)
+
 ```php
 generate_bill()
 ```
