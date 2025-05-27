@@ -1,6 +1,7 @@
 # ББД sql запросы
 ## ID bills
 ### cms_suppliers из id bill
+Получение 
 ```sql
 SELECT suppliers.* FROM `cms_suppliers_docs` AS docs
 JOIN `cms_suppliers_bills` AS bills ON docs.id = bills.supplierdoc_id
@@ -8,6 +9,7 @@ JOIN `cms_suppliers` AS suppliers ON docs.supplier_id = suppliers.id
 WHERE bills.id = 544256
 ```
 ### cms_suppliers_docs из id suppliers полученный из id bills
+Получение всех docs у одного supplier через id bills
 ```sql
 SELECT docs.* FROM `cms_suppliers_docs` AS docs
 WHERE docs.supplier_id = (SELECT suppliers.id FROM `cms_suppliers_docs` AS docs
@@ -16,7 +18,7 @@ JOIN `cms_suppliers` AS suppliers ON docs.supplier_id = suppliers.id
 WHERE bills.id = 544256)
 ```
 ### cms_suppliers_bills из id bills
-Получение всех bills договора
+Получение всех bills из всех docs одного supplier используя один id bills
 ```sql
 
 ```
