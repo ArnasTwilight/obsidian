@@ -15,7 +15,8 @@ JOIN `cms_suppliers_bills` AS bills ON docs.id = bills.supplierdoc_id
 JOIN `cms_suppliers` AS suppliers ON docs.supplier_id = suppliers.id
 WHERE bills.id = 544256)
 ```
-### cms_suppliers_docs из id bills
+### cms_suppliers_bills из id bills
+Получение всех bills договора
 ```sql
 
 ```
