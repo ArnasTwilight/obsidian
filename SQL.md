@@ -1,5 +1,6 @@
-# Часто используемые запросы для ББД
-### cms_suppliers из номера счёта
+# ББД sql запросы
+## ID bills
+### cms_suppliers из id bill
 ```sql
 SELECT suppliers.* FROM `cms_suppliers_docs` AS docs
 JOIN `cms_suppliers_bills` AS bills ON docs.id = bills.supplierdoc_id
@@ -12,9 +13,12 @@ SELECT docs.* FROM `cms_suppliers_docs` AS docs
 WHERE docs.supplier_id = (SELECT suppliers.id FROM `cms_suppliers_docs` AS docs
 JOIN `cms_suppliers_bills` AS bills ON docs.id = bills.supplierdoc_id
 JOIN `cms_suppliers` AS suppliers ON docs.supplier_id = suppliers.id
-WHERE bills.id = 1)
+WHERE bills.id = 544256)
 ```
+### cms_suppliers_docs из id bills
+```sql
 
+```
 
 Для включения логирования запросов в БД у ББД добавить в 
 ```
