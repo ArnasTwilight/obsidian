@@ -35,7 +35,7 @@ SELECT bills.* FROM `cms_suppliers_bills` AS bills WHERE bills.supplierdoc_id IN
     )
 )
 ```
-
+# Прочее
 Для включения логирования запросов в БД у ББД добавить в 
 ```
 \\wsl.localhost\Ubuntu-22.04\home\bnovo\projects\bnovo.booking-desk\.docker\images\mysql\conf.d\sql-mode.cnf
