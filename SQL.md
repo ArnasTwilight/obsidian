@@ -1,12 +1,12 @@
 # Часто используемые запросы для ББД
-cms_suppliers:
+### cms_suppliers из номера счёта
 ```sql
 SELECT suppliers.* FROM `cms_suppliers_docs` AS docs
 JOIN `cms_suppliers_bills` AS bills ON docs.id = bills.supplierdoc_id
 JOIN `cms_suppliers` AS suppliers ON docs.supplier_id = suppliers.id
 WHERE bills.id = 544256
 ```
-cms_suppliers_docs:
+cms_suppliers_docs из id suppliers полученный из id bills
 ```sql
 
 ```
