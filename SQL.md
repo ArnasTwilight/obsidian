@@ -1,4 +1,21 @@
 # ББД sql запросы
+## УПД
+cms_suppliers_bills:
+```SQL
+SELECT * FROM `cms_suppliers_bills` WHERE id = 531477
+```
+cms_suppliers_docs:
+```SQL
+SELECT docs.* FROM `cms_suppliers_docs` as docs
+JOIN `cms_suppliers_bills` as bills ON docs.id = bills.supplierdoc_id
+WHERE bills.id = 531477
+```
+cms_suppliers:
+```SQL
+SELECT docs.* FROM `cms_suppliers` as suppliers
+JOIN `cms_suppliers_docs` as docs ON suppliers.id = bills.supplierdoc_id
+WHERE bills.id = 531477
+```
 ## ID bills
 ### cms_suppliers из id bill
 Получение supplier из id bill
