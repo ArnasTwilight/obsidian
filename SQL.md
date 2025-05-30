@@ -64,3 +64,8 @@ general_log = 1
 general_log_file = /var/log/mysql/mysql-general.log  
 log_output = FILE
 ```
+
+Получение последнего sql запроса:
+```php
+$query = Database::instance()->last_query
+```
