@@ -13,7 +13,8 @@ WHERE bills.id = 531477
 cms_suppliers:
 ```SQL
 SELECT docs.* FROM `cms_suppliers` as suppliers
-JOIN `cms_suppliers_docs` as docs ON suppliers.id = bills.supplierdoc_id
+JOIN `cms_suppliers_docs` as docs ON docs.supplier_id = suppliers.id
+JOIN `cms_suppliers_bills` as bills ON docs.id = bills.supplierdocs_id
 WHERE bills.id = 531477
 ```
 ## ID bills
