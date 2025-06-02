@@ -205,3 +205,11 @@ https://app.pachca.com/chats?thread_message_id=518131259
 ```php
 Kohana::$log->write()
 ```
+
+Последний запрос в БД:
+```php
+if($file = fopen(DOCROOT . '/test/test_log.txt', 'a+')){  
+   fwrite($file, print_r(Database::instance()->last_query, true));  
+   fclose($file);  
+}
+```
