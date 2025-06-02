@@ -194,6 +194,8 @@ if ($transactions_maid && ($transactions_maid >= $transactions_billed)
 # Проблемы
 
 Не работает локально метод POST между PMS и BBD по какой-то причине, только GET
+Дополнение по POST:
+![](_attachments/Pasted%20image%2020250602104914.png)
 
 Может не записывать в логи из-за прав в папке **app/application/logs**.
 Проверить создание файла и папки можно через:
