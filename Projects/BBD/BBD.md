@@ -195,7 +195,10 @@ if ($transactions_maid && ($transactions_maid >= $transactions_billed)
 
 Не работает локально метод POST между PMS и BBD по какой-то причине, только GET
 Дополнение по POST:
+https://app.pachca.com/chats?thread_message_id=518131259
 ![](_attachments/Pasted%20image%2020250602104914.png)
+![](_attachments/Pasted%20image%2020250602104935.png)
+
 
 Может не записывать в логи из-за прав в папке **app/application/logs**.
 Проверить создание файла и папки можно через:
