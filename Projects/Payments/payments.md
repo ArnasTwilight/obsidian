@@ -3,8 +3,10 @@
 **Prod link:**
 
 **GIT link:**
-
+https://git.dev.bnovo.ru/core/paygate/payments
 **Localhost link:**
+http://localhost:3000/
+http://localhost:3307/
 
 ```php
 'host'   => 'bnovo_payment_mysql',
