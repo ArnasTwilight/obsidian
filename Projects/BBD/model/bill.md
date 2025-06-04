@@ -33,3 +33,8 @@ get_upd_docs_list()
 is_upd_instead_act(): bool
 ```
 Выполняет проверку, что должно выводиться УПД или акт
+
+```php
+deactivateOnlineLink()
+```
+Деактивирует ссылку на оплату посредством обращения к payments по ссылке "v2/deactivate_transaction"
