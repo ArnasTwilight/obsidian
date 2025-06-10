@@ -67,9 +67,9 @@ SELECT * FROM `cms_suppliers_docs` WHERE lcode IN (10,8486)
 ```
 ### cms_suppliers_bills из lcode
 ```sql
-SELECT * FROM `cms_suppliers_bills` WHERE ID IN 
+SELECT * FROM `cms_suppliers_bills` WHERE `supplierdoc_id` IN 
 (
-    SELECT `supplier_id` FROM `cms_suppliers_docs` WHERE lcode IN (10,8486)
+    SELECT `id` FROM `cms_suppliers_docs` WHERE lcode IN (10,8486)
 )
 ```
 # Прочее
