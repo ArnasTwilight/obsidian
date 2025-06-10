@@ -56,7 +56,10 @@ SELECT bills.* FROM `cms_suppliers_bills` AS bills WHERE bills.supplierdoc_id IN
 # lcode
 ### cms_suppliers из lcode
 ```sql
-
+SELECT * FROM `cms_suppliers` WHERE ID IN 
+(
+    SELECT `supplier_id` FROM `cms_suppliers_docs` WHERE lcode IN (10,8486)
+)
 ```
 ### cms_suppliers_docs из lcode
 ```sql
@@ -64,7 +67,10 @@ SELECT * FROM `cms_suppliers_docs` WHERE lcode IN (10,8486)
 ```
 ### cms_suppliers_bills из lcode
 ```sql
-
+SELECT * FROM `cms_suppliers_bills` WHERE ID IN 
+(
+    SELECT `supplier_id` FROM `cms_suppliers_docs` WHERE lcode IN (10,8486)
+)
 ```
 # Прочее
 Для включения логирования запросов в БД у ББД добавить в 
