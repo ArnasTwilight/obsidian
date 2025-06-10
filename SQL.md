@@ -60,7 +60,7 @@ SELECT bills.* FROM `cms_suppliers_bills` AS bills WHERE bills.supplierdoc_id IN
 ```
 ### cms_suppliers_docs из lcode
 ```sql
-
+SELECT * FROM `cms_suppliers_docs` WHERE lcode IN (10,8486)
 ```
 ### cms_suppliers_bills из lcode
 ```sql
