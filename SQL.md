@@ -72,6 +72,13 @@ SELECT * FROM `cms_suppliers_bills` WHERE `supplierdoc_id` IN
     SELECT `id` FROM `cms_suppliers_docs` WHERE lcode IN (10,8486)
 )
 ```
+
+# PMS sql запросы
+## hotels по lcode/hotel_id
+```sql
+SELECT * FROM hotels WHERE id IN (1, 2)
+```
+
 # Прочее
 Для включения логирования запросов в БД у ББД добавить в 
 ```
