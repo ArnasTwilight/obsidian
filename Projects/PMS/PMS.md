@@ -80,8 +80,12 @@ make install
 
 ## POST
 Не работает локально метод POST между PMS и BBD по какой-то причине, только GET
+На текущий момент проблема решена установкой параметра php:
+```php
+always_populate_raw_post_data=-1
+```
 
-Метод find() в модели
+## Метод find() в модели
 > В PMS это работать не будет, так как параметры find() не принимает.
 > 
 > Однако в ББД есть возможность получать таким образом запись по ID: [orm_new.php](https://git.dev.bnovo.ru/internal/bnovo.booking.desk/-/blob/master/app/modules/orm/classes/kohana/orm_new.php?ref_type=heads#L746) [orm.php](https://git.dev.bnovo.ru/internal/bnovo.booking.desk/-/blob/master/app/modules/orm/classes/kohana/orm.php?ref_type=heads#L747)
