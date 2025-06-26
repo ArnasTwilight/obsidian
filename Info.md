@@ -32,3 +32,25 @@ php -m
 > 
 > Пересечение по сетям - одна из причин почему у вас могут не работать наши ресурсы со включенным корпоративным VPN.
 
+# Тестирование
+Информация для тестирования для разработчиков:
+
+Смоук тест ББД находится [тут](https://bnovo.doqa.app/ru/home/detail/1/1/checklists?selected=135)
+
+Смоук тест для Админки смотрим [тут](https://bnovo.doqa.app/ru/home/detail/1/1/checklists?selected=139)
+
+Процесс: Выбираем нужный смоук, создаем по нему прогон, запускаем его, отмечаем успех/провал/пропуск пунктов чек-листа, завершаем прогон.
+
+Раскатываем на **старый** стейджинг? Выбираем пайплайн/ветку [тут](https://git.dev.bnovo.ru/internal/bnovo.booking.desk/-/pipelines) и по кнопке play тыкаем только "deploy-staging"
+
+Раскатываем на **новый** стейджинг? Выбираем пайплайн/ветку [тут](https://git.dev.bnovo.ru/internal/bnovo.booking.desk/-/pipelines) и по кнопке play тыкаем сначала "swarm-build-staging", ждем завершения, затем тыкаем "swarm-deploy-staging-6"
+
+Инструкция по билду и деплою на новые стейджи (в том числе и ббд) смотрим [тут](https://wiki.yandex.ru/dokumentacija-komand/platforma-team/testovye-stendy/instrukcija-po-jekspluatacii/)
+
+Посмотреть, какая ветка раскатана на стейджинге можно [тут](https://git.dev.bnovo.ru/internal/bnovo.booking.desk/-/environments) (staging - старый стенд ббд, staging-6 - новый стенд ббд, по кнопке "open" можно перейти в окружение)
+
+[https://bbd-6.staging.bnovo.ru/](https://bbd-6.staging.bnovo.ru/) - новый стенд ббд
+
+[https://staging.bnovo.booking-desk.ru/](https://staging.bnovo.booking-desk.ru/) - старый стенд ббд
+
+[https://staging6.pms.bnovo.ru/](https://staging6.pms.bnovo.ru/) - наш 6 стенд PMS для теста Админки (желательно, на всякий случай, отписываться в канале devs-staging о том, что вы его заняли)
