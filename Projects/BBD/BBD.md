@@ -191,6 +191,15 @@ if ($transactions_maid && ($transactions_maid >= $transactions_billed)
 
 ![](_attachments/Pasted%20image%2020250521144634.png)
 
+# Запуск action
+wget через консоль:
+```bash
+wget 0 /dev/null -q http://localhost:10001/batch/start
+```
+Фоновый запуск таска в коде:
+```php
+shell_exec('nohup php index.php --uri=batch/just_log > /dev/null 2>/dev/null & printf "%u" $!');
+```
 # Проблемы
 
 Не работает локально метод POST между PMS и BBD по какой-то причине, только GET
