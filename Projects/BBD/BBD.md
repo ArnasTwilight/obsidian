@@ -196,9 +196,13 @@ wget через консоль:
 ```bash
 wget -q -O /dev/null http://localhost:10001/batch/start
 ```
-Фоновый запуск таска в коде:
+Фоновый запуск таска в коде без логов:
 ```php
 shell_exec('nohup php index.php --uri=batch/just_log > /dev/null 2>/dev/null & printf "%u" $!');
+```
+Фоновый запуск таска в коде с логами:
+```php
+shell_exec('nohup php index.php --uri=batch/just_log | logger &');
 ```
 # Проблемы
 
